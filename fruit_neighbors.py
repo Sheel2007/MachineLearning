@@ -12,7 +12,7 @@ df = pd.read_table('fruit_data_with_colors.txt')
 df = df.drop('fruit_name', axis=1)
 df = df.drop('fruit_subtype', axis=1)
 
-print(df.head())
+print(df.columns)
 
 X = df.drop('fruit_label', axis=1)
 y = df['fruit_label']
@@ -25,14 +25,24 @@ knn.fit(X_train, y_train)
 
 preds = knn.predict(X_test)
 
-print(preds)
-
 preds = np.array(preds)
 y_test = np.array(y_test)
 
-print(y_test)
-
 score = accuracy_score(y_test, preds)
-print(score)
 
 color = ['green', 'red']
+#plotting accuracy
+for i, _ in enumerate(y_test):
+    if preds[i] == y_test[i]:
+        plt.scatter(y_test[i], preds[i], c=color[0])
+    else:
+        plt.scatter(y_test[i], preds[i], c=color[1])
+plt.show()
+#plotting other values
+for i, _ in enumerate(y_test):
+    if preds[i] == y_test[i]:
+        plt.scatter(df['width'][i], df['height'][i], c=color[0])
+    else:
+        plt.scatter(df['height'][i], df['width'][i], c=color[1])
+
+plt.show()
