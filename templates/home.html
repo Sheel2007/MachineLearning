@@ -1,0 +1,80 @@
+<html>
+    <body>
+        <center>
+
+        <h1 style="color: white;"> Lung Cancer Detection </h1><br>
+            <style>
+                @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+                body {
+                    background-color: rgb(31, 33, 36);
+                    font: 14px;
+                    font-family: "Open Sans", Helvetica, Arial, san-serif;
+                    font-weight: normal;
+                    text-indent: 5px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                    background-color: rgb(31, 33, 36);
+                }
+                form {
+                    color: white;
+                    border-radius: 8px;
+                    background-color: #000000;
+                    max-width: 480px;
+                    text-align: left;
+                    font: 14px;
+                    font-family: "Open Sans", Helvetica, Arial, san-serif;
+                    font-weight: normal;
+                }
+
+                input {
+                    background-color: rgb(31, 33, 36);
+                    outline-color: rgb(128, 128, 128);
+                    color: white;
+                    text-align: center;
+                    font-size: 15px;
+                    margin: auto;
+                    display: table column;
+                    border: none;
+                    position: relative;
+                    font-family: "Open Sans", Helvetica, Arial, san-serif;
+                    border-radius: 15px 50px 30px;
+                    left: 30;
+                }
+
+
+                div {
+                    text-align: center;
+                    position: relative;
+                    border-radius: 3px 10px 6px 1px;
+                    right: z;
+                }
+            </style>
+        <form method="POST" , action="{{url_for('predict')}}">
+            Symptoms<br><br>
+            Gender : <br><br> <input type="text" , name='a' , placeholder="male or female" , class="input"> <br><br>
+            Age : <br><br> <input type="text" , name='b' , placeholder="enter a number" , class="input"> <br><br>
+            Smoking : <br><br> <input type="text", name='c', placeholder="yes or no", class="input"> <br><br>
+            Yellow Fingers : <br><br> <input type="text", name='d', placeholder="yes or no", class="input"> <br><br><br>
+            Anxiety :<br><br>  <input type="text", name='e', placeholder="yes or no", class="input"> <br><br><br>
+            Peer Pressure : <br><br> <input type="text", name='f', placeholder="yes or no", class="input"> <br><br><br>
+            Chronic Disease : <br><br> <input type="text", name='g', placeholder="yes or no", class="input"> <br><br><br>
+            Fatigue : <br><br> <input type="text", name='h', placeholder="yes or no", class="input"> <br><br><br>
+            Allergy : <br><br> <input type="text", name='i', placeholder="yes or no", class="input"> <br><br><br>
+            Wheezing : <br><br> <input type="text", name='j', placeholder="yes or no", class="input"> <br><br><br>
+            Alcohol Consuming : <br><br> <input type="text", name='k', placeholder="yes or no", class="input"> <br><br><br>
+            Coughing : <br><br> <input type="text", name='l', placeholder="yes or no", class="input"> <br><br><br>
+            Shortness of Breath : <br><br> <input type="text", name='m', placeholder="yes or no", class="input"> <br><br><br>
+            Swallowing Difficulty : <br><br> <input type="text", name='n', placeholder="yes or no", class="input"> <br><br><br>
+            Chest Pain : <br><br> <input type="text", name='o', placeholder="yes or no", class="input"> <br><br><br>
+            <div>
+                <input type="submit" , value='predict!'>
+            </div>
+        </form>
+
+        
+    </center>
+
+    </body>
+</html>
