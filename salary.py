@@ -3,4 +3,4 @@ import numpy as np
 
 df = pd.read_csv('Levels_Fyi_Salary_Data.csv')
 
-print(df.head())
+df = df[['company', 'totalyearlycompensation', 'yearsofexperience', 'yearsatcompany', 'basesalary']]
