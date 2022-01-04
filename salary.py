@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 
 df = pd.read_csv('Levels_Fyi_Salary_Data.csv')
 
-df = df[['company', 'totalyearlycompensation', 'yearsofexperience', 'yearsatcompany', 'basesalary']]
+df = df[['totalyearlycompensation', 'yearsofexperience', 'yearsatcompany', 'basesalary']]
 
 x = df.drop('totalyearlycompensation', axis=1)
 y = df['totalyearlycompensation']
@@ -16,3 +16,4 @@ lr = LinearRegression()
 
 lr.fit(x_train, y_train)
 
+print(lr.score(x_test, y_test))
