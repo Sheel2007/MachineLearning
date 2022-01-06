@@ -16,8 +16,10 @@ df['Customer type'] = df['Customer type'].replace({'Normal': 0, 'Member': 1})
 df['Gender'] = df['Gender'].replace({'Female': 0, 'Male': 1})
 df['Payment'] = df['Payment'].replace({'Cash': 0, 'Credit card': 1, 'Ewallet': 2})
 
-x = df.drop('Rating', axis=1)
-y = df['Rating']
+df['Rating'] = df['Rating'].astype(int)
+
+x = df.drop('Total', axis=1)
+y = df['Total']
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 
