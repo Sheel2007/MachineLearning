@@ -1,0 +1,73 @@
+<html>
+    <body>
+        <center>
+
+        <h1 style="color: white;"> Prostate Cancer Detection </h1><br>
+            <style>
+                @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+                body {
+                    background-color: rgb(31, 33, 36);
+                    font: 14px;
+                    font-family: "Open Sans", Helvetica, Arial, san-serif;
+                    font-weight: normal;
+                    text-indent: 5px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                    background-color: rgb(31, 33, 36);
+                }
+                form {
+                    color: white;
+                    border-radius: 8px;
+                    background-color: #000000;
+                    max-width: 480px;
+                    text-align: left;
+                    font: 14px;
+                    font-family: "Open Sans", Helvetica, Arial, san-serif;
+                    font-weight: normal;
+                }
+
+                input {
+                    background-color: rgb(31, 33, 36);
+                    outline-color: rgb(128, 128, 128);
+                    color: white;
+                    text-align: center;
+                    font-size: 15px;
+                    margin: auto;
+                    display: table column;
+                    border: none;
+                    position: relative;
+                    font-family: "Open Sans", Helvetica, Arial, san-serif;
+                    border-radius: 15px 50px 30px;
+                    left: 30;
+                }
+
+
+                div {
+                    text-align: center;
+                    position: relative;
+                    border-radius: 3px 10px 6px 1px;
+                    right: z;
+                }
+            </style>
+        <form method="POST" , action="{{url_for('predict')}}">
+            Questions<br><br>
+            Radius : <br><br> <input type="text" , name='a' , placeholder="number" , class="input"> <br><br>
+            Texture : <br><br> <input type="text" , name='b' , placeholder="number" , class="input"> <br><br>
+            Perimeter : <br><br> <input type="text", name='c', placeholder="number", class="input"> <br><br>
+            Area : <br><br> <input type="text", name='d', placeholder="number", class="input"> <br><br><br>
+            Smoothness :<br><br>  <input type="text", name='e', placeholder="number", class="input"> <br><br><br>
+            Compactness :<br><br>  <input type="text", name='f', placeholder="number", class="input"> <br><br><br>
+            Symmetry :<br><br>  <input type="text", name='g', placeholder="number", class="input"> <br><br><br>
+            Fractal Dimension :<br><br>  <input type="text", name='h', placeholder="number", class="input"> <br><br><br>
+            <div>
+                <input type="submit" , value='predict!'>
+            </div>
+        </form>
+
+
+    </center>
+
+    </body>
+</html>

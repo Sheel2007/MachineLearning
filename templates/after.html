@@ -1,0 +1,59 @@
+<html>
+
+<body>
+
+    <center>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Comic+Sans');
+
+            body {
+                background-color: rgb(31, 33, 36);
+            }
+
+            h1 {
+                color: white;
+                font-family: "Open Sans", Helvetica, Arial, san-serif;
+            }
+            p {
+                width: 500;
+                text-align: center;
+                color: white;
+                font-family: "Open Sans", Helvetica, Arial, san-serif;
+            }
+
+            a {
+                color: blue;
+            }
+
+        </style>
+
+    {%if data == 0%}
+    <h1 style="color: white;">You do NOT have lung cancer</h1>
+        <p style="color: white;">You do not have lung cancer but
+            if you are concerned about being diagnosed
+            with lung cancer you should
+            consider making an appointment with a
+            doctor because this model is only correct 83% of the time.</p>
+        <a href="https://marylandoncology.com/locations-healthcare-team/locations/">
+            Click here to learn where to get screened for lung cancer</a>
+
+    {%elif data == 1%}
+        <h1>You may have lung cancer</h1>
+        <p>Take a deep breath, you may have lung cancer, or you may not because this model
+        it only correct 83% of the time.</p>
+        <a href="https://marylandoncology.com/locations-healthcare-team/locations/">Make an appointment to
+        screen for lung cancer by clicking here</a>
+        <a href="http://localhost:63342/omegaawesomeprojectofdoom/templates/after.html?_ijt=1dlag6oj8fsu7sh7fffne6r8h8&_ij_reload=RELOAD_ON_SAVE">
+            If you know you have lung cancer click this link to see treatment options</a>
+
+    {%endif%}
+
+        <br><br>
+    <a href='/'>Click this to start the survey again</a>
+
+    </center>
+
+</body>
+
+</html>

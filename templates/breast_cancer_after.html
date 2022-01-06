@@ -1,0 +1,59 @@
+<html>
+
+<body>
+
+    <center>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Comic+Sans');
+
+            body {
+                background-color: rgb(31, 33, 36);
+            }
+
+            h1 {
+                color: white;
+                font-family: "Open Sans", Helvetica, Arial, san-serif;
+            }
+            p {
+                width: 500;
+                text-align: center;
+                color: white;
+                font-family: "Open Sans", Helvetica, Arial, san-serif;
+            }
+
+            a {
+                color: blue;
+            }
+
+        </style>
+
+    {%if data == 0%}
+    <h1 style="color: white;">You do NOT have Breast cancer</h1>
+        <p style="color: white;">You do not have breast cancer but
+            if you are concerned about being diagnosed
+            with breast cancer you should
+            consider making an appointment with a
+            doctor because this model is only correct 83% of the time.</p>
+        <a href="https://www.inova.org/breast-cancer-program?utm_source=eruptr&utm_medium=cpc&cr=breast_cancer&utm_campaign=breast_cancer&gclid=Cj0KCQiAwqCOBhCdARIsAEPyW9kldXwwGUcLLxU_4ZYVuS4JWmPbe5svOtSlzTmMcyvJ0qCFBx6itmMaAm0eEALw_wcB">
+            Click here to get screened for breast cancer</a>
+
+    {%elif data == 1%}
+        <h1>You may have breast cancer</h1>
+        <p>Take a deep breath, you may have breast cancer, or you may not because this model
+        it only correct 83% of the time.</p>
+        <a href="https://www.inova.org/breast-cancer-program?utm_source=eruptr&utm_medium=cpc&cr=breast_cancer&utm_campaign=breast_cancer&gclid=Cj0KCQiAwqCOBhCdARIsAEPyW9kldXwwGUcLLxU_4ZYVuS4JWmPbe5svOtSlzTmMcyvJ0qCFBx6itmMaAm0eEALw_wcB">Make an appointment to
+        screen for breast cancer by clicking here</a>
+        <a href="https://www.cancer.net/cancer-types/breast-cancer/types-treatment">
+            If you know you have lung cancer click this link to see treatment options</a>
+
+    {%endif%}
+
+        <br><br>
+    <a href='/'>Click this to start the survey again</a>
+
+    </center>
+
+</body>
+
+</html>
