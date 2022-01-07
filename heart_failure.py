@@ -23,3 +23,8 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 
 clf = SVC()
 clf.fit(x_train, y_train)
+
+predictions = clf.predict(x_test)
+
+acc = np.sum(predictions == y_test) / len(y_test)
+print(acc)
